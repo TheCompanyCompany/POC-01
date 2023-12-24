@@ -39,7 +39,15 @@ opam import ./.opam-switch
 
 ## Adding dependencies
 
+Add them to the dune-project file.
+Then run the next script to install them and update the poc-01.opam file.
+
 ```bash
-opam install <package-name>
-opam export .opam-switch
+dune build
+```
+
+## How to run the project
+
+```bash
+dune exec src/server.exe
 ```
