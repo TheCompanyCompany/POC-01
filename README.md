@@ -36,3 +36,10 @@ eval $(opam env --switch=default)
 ```bash
 opam import ./.opam-switch
 ```
+
+## Adding dependencies
+
+```bash
+opam install <package-name>
+opam export .opam-switch
+```
