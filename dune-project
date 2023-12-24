@@ -5,4 +5,4 @@
 (package
  (name poc-01)
  (allow_empty)
- (depends dream reason))
+ (depends dream reason opentelemetry))

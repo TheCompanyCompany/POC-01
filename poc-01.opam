@@ -4,6 +4,7 @@ depends: [
   "dune" {>= "3.12"}
   "dream"
   "reason"
+  "opentelemetry"
   "odoc" {with-doc}
 ]
 build: [
