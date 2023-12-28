@@ -4,7 +4,7 @@ services:
   server:
     build: .
     ports:
-      - "8080:5001"
+      - "8080:80"
     restart: always
     logging:
       driver: ${LOGGING_DRIVER:-json-file}
