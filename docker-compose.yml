@@ -1,0 +1,10 @@
+version: "0.1"
+
+services:
+  server:
+    build: .
+    ports:
+      - "8080:5001"
+    restart: always
+    logging:
+      driver: ${LOGGING_DRIVER:-json-file}
