@@ -1,4 +1,5 @@
-_build
 .github
-.git
+.git/
 README.md
+Dockerfile
+docker-compose.yml
