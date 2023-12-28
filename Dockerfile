@@ -5,6 +5,8 @@ RUN sudo apk add --update libev-dev openssl-dev
 
 WORKDIR /home/opam
 
+RUN mkdir -p _build/log.
+
 # Install dependencies
 ADD poc-01.opam poc-01.opam
 RUN opam install . --deps-only
