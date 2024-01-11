@@ -1,31 +1,31 @@
-# Dream + HTMX
-
-<!--toc:start-->
-- [Dream + HTMX](#dream-htmx)
-  - [Installing Ocaml and Opam](#installing-ocaml-and-opam)
-<!--toc:end-->
+# Dream HTMX
 
 ## Installing Ocaml and Opam
 
-OCaml's package manager, opam, installs both the compiler, as well as any additional packages. Ensure gcc, build-essential, curl, unzip, and bubblewrap are installed on your system, then run the following in your terminal to download and install the newest version of opam:
+OCaml's package manager, opam, installs both the compiler, as well as any
+packages. Ensure to install gcc, build-essential, curl, unzip, and bubblewrap
+on your system, then run the following in your terminal to
+download and install the newest version of opam:
 
 ```bash
 bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
 ```
 
-Opam needs to be initialised, which will create a default opam switch. An opam switch is an isolated environment for the OCaml compiler and any packages you install.
+You need to install Opam, which will create a default opam switch. An opam
+switch is an isolated environment for the OCaml compiler and any packages you
+install.
 
 ```bash
 opam init
 ```
 
-Additionally, if you did not already add the necessary lines to your shell configuration file, you need to run the following command to set up your shell environment to use opam:
+Run the following command to set up your shell environment:
 
 ```bash
 eval $(opam env)
 ```
 
-Finally, run this to initialize your shell:
+And run this to initialize your shell:
 
 ```bash
 eval $(opam env --switch=default)
@@ -39,15 +39,18 @@ opam import ./.opam-switch
 
 ## Adding dependencies
 
-Add them to the dune-project file.
-Then run the next script to install them and update the poc-01.opam file.
+To add dependencies use the dune-project file.
+
+## How to run the project
 
 ```bash
 dune build
 ```
 
-## How to run the project
-
 ```bash
 dune exec src/server.exe
 ```
+
+## How to deploy the project
+
+This project uses DigitalOcean automatic deployment
